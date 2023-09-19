@@ -1,0 +1,70 @@
+.content {
+  margin: 30px 5vw;
+}
+
+.filter_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+}
+
+.filter_wrap_content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.filter_wrap_content p {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  margin: 0;
+}
+
+.loadFile {
+  margin-bottom: 15px;
+}
+
+.table-container .pagination {
+  justify-content: center;
+  gap: 10px;
+}
+
+.file_data {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.file_data button {
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.file_data p {
+  display: grid;
+  margin: 0;
+  gap: 10px;
+  grid-template-columns: auto 1fr;
+}
+
+.file_data label {
+  margin: 0;
+}
+
+.table-responsive table {
+  width: 100%;
+}
+
+.file_info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.file_info>p {
+  margin: 0;
+}

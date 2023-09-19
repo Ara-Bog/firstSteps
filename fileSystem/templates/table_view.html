@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block content %} {% load static %} {% block cssblock %}
+<link rel="stylesheet" href="{% static 'style.css' %}" />
+{% endblock %}
+
+<div class="content">
+  <a href="{% url 'fileSystem:index' %}" class="btn btn-outline-primary">Назад</a>
+  <div class="file_info">
+    <p>ID: {{ form.get_id_value }}</p>
+    <p>Размер: {{ form.get_size_value }}</p>
+    <p>Количество строк: {{ form.get_row_count_value }}</p>
+    <p>Дата загрузки: {{ form.get_uploaded_at_value }}</p>
+  </div>
+  <form class="file_data" method="post" enctype="multipart/form-data">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Сохранить изменения</button>
+  </form>
+
+  <h2>Содержимое таблицы (первые 50 записей)</h2>
+  <div class="table-responsive">{{ html_table|safe }}</div>
+</div>
+{% endblock %}
